@@ -64,10 +64,26 @@ main{
     overflow-y: auto;
 }
 
+#result{
+    height: 150px;
+    text-align: center;
+}
+
+#result h1{
+    padding: 50px;
+    color: red;
+    text-shadow: 4px 3px 5px #000000;
+}
+
+.green{
+    color: green !important;
+    text-shadow: 4px 3px 5px #3f3f3fb4 !important;
+}
+
 #container{
     display: flex;
     flex-wrap: wrap;
-    padding: 120px 36%;
+    padding: 0px 36%;
 }
 
 .cell{
