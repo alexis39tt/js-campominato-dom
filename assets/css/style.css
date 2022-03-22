@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer{
+    padding: 10px 10%;
+    background: white;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    height: 100px;
+    line-height: 80px;
+}
+
+.headbar{
+    justify-content: space-between;
+}
+
+.logo h1{
+    margin-left: 20px;
+}
+
+.logo img{
+    max-width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.difficulty{
+    align-self: flex-end;
+}
+
+.difficulty select{
+    width: 200px;
+    height: 25px;
+    margin: auto 10px;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.difficulty input{
+    width: 100px;
+    height: 25px;
+    margin: auto 10px;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+main{
+    height: calc(100vh - 150px);
+    background: #7fffd4;
+    overflow-y: auto;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 36%;
+}
+
+.cell{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.cell:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.cell p {
+    line-height: 48px;
+}
