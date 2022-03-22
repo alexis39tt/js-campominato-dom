@@ -72,12 +72,11 @@ main{
 #result h1{
     padding: 50px;
     color: red;
-    text-shadow: 4px 3px 5px #000000;
+    text-shadow: 4px 3px 5px #3f3f3fb4
 }
 
 .green{
     color: green !important;
-    text-shadow: 4px 3px 5px #3f3f3fb4 !important;
 }
 
 #container{
@@ -99,6 +98,15 @@ main{
     cursor: pointer;
 }
 
-.cell p {
+.cell p, i.bomb{
     line-height: 48px;
+}
+
+i.bomb{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.noselect{
+    user-select: none;
 }
