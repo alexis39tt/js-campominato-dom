@@ -16,25 +16,22 @@ function Build(diff) {
     container.innerHTML = ``;
 
     if (diff == "easy") {
-        let rand = Math.ceil(Math.random() * 33 + min);
-        for (i = 0; i < rand; i++) {
+        for (i = 0; i < 49; i++) {
             container.innerHTML += `<div class="cell normal"><p>${i + 1}</p></div>`;
         }
-        return rand;
+        return 49;
     }
     else if (diff == "medium") {
-        let rand = Math.ceil(Math.random() * 65 + min);
-        for (i = 0; i < rand; i++) {
+        for (i = 0; i < 81; i++) {
             container.innerHTML += `<div class="cell normal"><p>${i + 1}</p></div>`;
         }
-        return rand;
+        return 81;
     }
     else {
-        let rand = Math.ceil(Math.random() * 84 + min);
-        for (i = 0; i < rand; i++) {
+        for (i = 0; i < 100; i++) {
             container.innerHTML += `<div class="cell normal"><p>${i + 1}</p></div>`;
         }
-        return rand;
+        return 100;
     }
 }
 function AddEvent() {
@@ -44,10 +41,8 @@ function AddEvent() {
     for (i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", function CellListener() {
             if (finish == false) {
+                this.classList.add("clicked");
                 points++;
-                this.style.color = "white";
-                this.style.background = "#6495ed";
-                this.style.cursor = "default";
             }
             
             if (points >= cells.length - 16) {
@@ -60,13 +55,15 @@ function AddEvent() {
     for (i = 0; i < bombs.length; i++) {
         bombs[i].addEventListener("click", function BombListener() {
             if (finish == false) {
-                this.style.background = "red";
-                this.style.cursor = "not-allowed";
+                for(j=0; j<bombs.length; j++){
+                    bombs[j].classList.add("bomb-clicked");
+                }
+                this.classList.add("bomb-clicked");
                 this.innerHTML = `<i class="fa-solid fa-bomb bomb"></i>`;
                 result.innerHTML = `<h1>Hai perso! Punteggio: ${points - 1}</h1>`;
                 finish = true;
-                for(i=0; i<cells.length; i++){
-                    cells[i].style.cursor = "not-allowed";
+                for(j=0; j<cells.length; j++){
+                    cells[j].style.cursor = "not-allowed";
                 }
             }
         }

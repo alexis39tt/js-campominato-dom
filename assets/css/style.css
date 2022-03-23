@@ -110,3 +110,14 @@ i.bomb{
 .noselect{
     user-select: none;
 }
+
+.clicked{
+    color: white;
+    background:#6495ed !important;
+    cursor: default;
+}
+
+.bomb-clicked{
+    background: red !important;
+    cursor: not-allowed !important;
+}
